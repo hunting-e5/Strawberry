@@ -10,12 +10,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function Login(props) {
+function Login() {
     const classes = useStyles();
 
     return (
-        <span className={classes.root}>
-            <Button>로그인</Button>
+        <span id = 'login'>
+            <span className={classes.root}>
+                <Button>로그인</Button>
+            </span>
         </span>
     );
 }
