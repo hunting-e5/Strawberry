@@ -1,0 +1,15 @@
+#category_wrap {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    padding: 10px 400px;
+}
+
+.category {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: 0;
+    margin-right: auto;
+}
