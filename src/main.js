@@ -1,38 +1,23 @@
-import React,{Component} from 'react';
-import axios from 'axios';
-import ItemList from './components/itemlist/list';
-import Header from "./components/itemlist/header";
-import Category from "./components/itemlist/category";
+import React, { Component } from 'react';
+import Header from "./components/Header";
+import Category from "./components/Category";
+import { Route, } from "react-router-dom";
+import SignIn from './components/Tabs/LoginTab/SignIn';
+import SignUp from './components/Tabs/LoginTab/SignUp';
 
-function main(props) {
-    constructor(props){ 
-        super(props);
-        this.state = { 
-            category : 'life',
-            ItemList : []
-        }
+class Main extends Component {
+    render() {
+        return (
+            <div>
+                <Route exact path = "/">    
+                    <Header />
+                    <Category />
+                </Route>
+                <Route exact path = '/signin'><SignIn></SignIn></Route>
+                <Route exact path = '/signup'><SignUp></SignUp></Route>
+            </div>
+        );
     }
-    componentDidMount(){ 
-        this._getList();
-    }
-    _getList(){
-        const apiUrl = 'dummy/ItemList.json'; 
-        axios.get(apiUrl) .then(data => { 
-             this.setState({ 
-                 webtoonList : data.data.ItemList
-                 }); }) 
-                 .catch(error => { 
-                     console.log(error); 
-                    }); 
-            }
-
-    return (
-        <div>
-            <Header/>
-            <Category/>
-
-        </div>
-    );
 }
 
-export default main;
+export default Main;
