@@ -1,24 +1,25 @@
 import React, {Component} from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import {Link} from "react-router-dom";
 
-function list(props) {
+const ItemList=(props)=> {
     return (
-        <ul className="itemlist">
-            {props.List.map((item, index)=>(
-                <li key={index}>
-                    <Link to="/" className="link_items">
-                        <img src={item.place} className="img_items" alt={item.title}/>
-                        <div className="info_items">
-                            <strong className="tit_items">
-                                {item.title}
-                            </strong>
-                            {item.price}
-                        </div>
-                    </Link>
-                </li>
-            )) }
+        <ul className="mylist">
+        {props.list.map((lists) =>
+        <li className="list_items" key={lists.id}>
+            <Link to="/" className="link_items">
+            <img src={lists.src} className="img_items" alt={lists.title}/>
+            <div className="info_items">
+                <strong className="tit_items">
+                    제품명 : {lists.title} <p></p>
+                </strong>
+                제품 가격 : {lists.price}
+            </div>
+            </Link>
+        </li>
+        )}
         </ul>
     );
 }
 
-export default list;
+export default ItemList;

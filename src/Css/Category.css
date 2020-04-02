@@ -1,3 +1,4 @@
+button {border:0 none;background-color:transparent;cursor:pointer}
 #category_wrap {
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
@@ -5,7 +6,6 @@
     justify-content: center;
     padding: 10px 400px;
 }
-
 .category {
     border: none;
     background: none;

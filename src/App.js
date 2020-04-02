@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Route, BrowserRouter } from 'react-router-dom';
 import SignIn from './components/Tabs/LoginTab/SignIn';
@@ -19,8 +18,12 @@ class App extends Component {
         <Route exact path="/" component={Main} />
         <Route exact path="/signin"><SignIn></SignIn></Route>
         <Route exact path="/signup"><SignUp></SignUp></Route>
+        <Route exact path="/check"><Check></Check></Route>
       </BrowserRouter>
       </div>
     );
   }
+}
+
+
 export default App;
