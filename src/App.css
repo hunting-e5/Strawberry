@@ -5,8 +5,8 @@ body,div,dl,dt,dd,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea
 ul {margin:0;padding:10px}
 dl,ul,ol,menu,li {list-style:none}
 
-.mylist li {display:grid;grid-template-columns:510px 1fr;border:4px solid rgb(245, 243, 243);width:500px;height:300px}
-.mylist .link_items {display:grid;overflow:hidden;text-align: left;}
-.mylist .img_items {float:left;width:300px;height:200px;margin-right:10px}
+.mylist li {border-top:1px solid #ccc}
+.mylist .link_items {display:grid;overflow:hidden}
+.mylist .img_items {float:left;width:200px;height:150px;margin-right:10px}
 .mylist .info_items {overflow:hidden}
-.mylist .info_items .tit_items {display:block;font-size:16px;padding:8px 0}
+.mylist .info_items .tit_items {display:grid;font-size:16px;padding:8px 0}

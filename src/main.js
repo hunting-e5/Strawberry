@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React, {Component} from 'react';
 import axios from 'axios';
 import ItemLists from "./components/itemlist/list";
-import Header from "./components/itemlist/header";
-import Category from "./components/itemlist/category";
 
 class main extends Component {
     constructor(props){ 
@@ -45,28 +42,6 @@ class main extends Component {
             </div>
         );
             }
-=======
-import React, { Component } from 'react';
-import Header from "./components/Header";
-import Category from "./components/Category";
-import { Route, } from "react-router-dom";
-import SignIn from './components/Tabs/LoginTab/SignIn';
-import SignUp from './components/Tabs/LoginTab/SignUp';
-
-class Main extends Component {
-    render() {
-        return (
-            <div>
-                <Route exact path = "/">    
-                    <Header />
-                    <Category />
-                </Route>
-                <Route exact path = '/signin'><SignIn></SignIn></Route>
-                <Route exact path = '/signup'><SignUp></SignUp></Route>
-            </div>
-        );
-    }
->>>>>>> 300ea68afbe71af00c75d7df2a0ef7964a425f16
 }
 
-export default Main;
+export default main;
