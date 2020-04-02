@@ -1,15 +1,20 @@
-button {border:0 none;background-color:transparent;cursor:pointer}
 #category_wrap {
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+    background-color: white;
+    border: 1px solid lightgray;
     display: flex;
     justify-content: center;
-    padding: 10px 400px;
+    width: 1280px;
+}
+.button_wrap {
+    margin-right: auto;
+    width: 120px;
+    height: 25px;
 }
 .category {
     border: none;
     background: none;
     cursor: pointer;
     outline: 0;
-    margin-right: auto;
+    width: 120px;
+    height: 25px;
 }
