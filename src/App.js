@@ -9,7 +9,7 @@ import Header from "./components/MainHeader";
 class App extends Component {
   render(){
     return (
-      <div>
+      <div id = 'container'>
       <BrowserRouter>
         <Route exact path="/">
           <Header/>

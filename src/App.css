@@ -10,3 +10,9 @@ dl,ul,ol,menu,li {list-style:none}
 .mylist .img_items {float:left;width:200px;height:150px;margin-right:10px}
 .mylist .info_items {overflow:hidden}
 .mylist .info_items .tit_items {display:grid;font-size:16px;padding:8px 0}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

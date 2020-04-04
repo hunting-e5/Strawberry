@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ItemLists from "./components/itemlist/list";
-import MainHeader from "./components/MainHeader";
 import './Css/Main.css';
 
 class Main extends Component {
@@ -30,16 +29,18 @@ class Main extends Component {
     }
     render() {
         return (
-            {this.state.ItemList.length > 0 ? (
-                <ItemLists list={this.state.ItemList.filter(item => (
-                    item.category === this.state.category
-                ))}/>
-            ) : (
-                    <span>
-                        Loading..
-                    </span>
-            )}
-    );
+            <div>
+                {this.state.ItemList.length > 0 ? (
+                    <ItemLists list={this.state.ItemList.filter(item => (
+                        item.category === this.state.category
+                    ))}/>
+                ) : (
+                        <span>
+                            Loading..
+                        </span>
+                )}
+            </div>
+        );
     }
 }
 

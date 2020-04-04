@@ -13,9 +13,7 @@ function MainHeader() {
             <SearchBox />
             <Login />
           </div>
-          <div>
-            <MainCategory />
-          </div>
+          <MainCategory />
         </div>
     );
 }
