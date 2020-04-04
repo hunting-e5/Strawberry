@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
 //import ItemsCarousel from 'react-items-carousel';
 
 const ItemList=(props)=> {
@@ -10,12 +9,12 @@ const ItemList=(props)=> {
     const chevronWidth = 40;
     const responsive = {
         desktop: {
-          breakpoint: { max: 3000, min: 1024 },
+          breakpoint: { max: 3000, min: 1000 },
           items: 4,
           partialVisibilityGutter: 40 // this is needed to tell the amount of px that should be visible.
         },
         tablet: {
-          breakpoint: { max: 1024, min: 464 },
+          breakpoint: { max: 1000, min: 600 },
           items: 2,
           partialVisibilityGutter: 30 // this is needed to tell the amount of px that should be visible.
         },

@@ -30,19 +30,16 @@ class Main extends Component {
     }
     render() {
         return (
-            <div id = 'main_wrap'>
-                <MainHeader />
-                {this.state.ItemList.length > 0 ? (
-                    <ItemLists list={this.state.ItemList.filter(item => (
-                        item.category === this.state.category
-                    ))}/>
-                ) : (
-                        <span>
-                            Loading..
-                        </span>
-                )}
-            </div>
-        );
+            {this.state.ItemList.length > 0 ? (
+                <ItemLists list={this.state.ItemList.filter(item => (
+                    item.category === this.state.category
+                ))}/>
+            ) : (
+                    <span>
+                        Loading..
+                    </span>
+            )}
+    );
     }
 }
 
