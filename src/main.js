@@ -40,7 +40,7 @@ class Main extends Component {
                         <span>
                             Loading..
                         </span>
-                    )}
+                )}
             </div>
         );
     }
