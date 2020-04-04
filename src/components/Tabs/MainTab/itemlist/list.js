@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ItemCards from "../stories/Card";
+import ItemCards from "../../../stories/Card";
 //import ItemsCarousel from 'react-items-carousel';
 
 const ItemList = (props) => {

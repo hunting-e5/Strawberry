@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import ItemLists from "./components/itemlist/list";
-import './css/Main.css';
+import ItemLists from "./itemlist/list";
+import './Main.css';
 
-class Main extends Component {
+class MainItemList extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,9 +15,12 @@ class Main extends Component {
         this._getList();
     }
     _getList() {
-        const apiUrl = 'dummy/ItemList.json';
+        const apiUrl = '/data/dummy/ItemList.json'; // 나중에 src/data/dummy/ItemList.json 절대경로로 수정하기
+        console.log(apiUrl, "getList");
+
         axios.get(apiUrl)
             .then(data => { //가지고 온 리스트를 저장
+                console.log(apiUrl, "saved");
                 this.setState({
                     ItemList: data.data.ItemList,
                     category: 'life'
@@ -58,4 +61,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default MainItemList;

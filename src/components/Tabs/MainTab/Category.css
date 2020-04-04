@@ -3,7 +3,7 @@
     border: 1px solid lightgray;
     display: flex;
     justify-content: center;
-    width: 1280px;
+    width: 100%;
 }
 .button_wrap {
     margin-right: auto;

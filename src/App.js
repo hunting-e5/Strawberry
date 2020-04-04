@@ -3,10 +3,10 @@ import './App.css';
 import { Route, BrowserRouter } from 'react-router-dom';
 import SignIn from './components/Tabs/LoginTab/SignIn';
 import SignUp from './components/Tabs/LoginTab/SignUp';
-import Main from './main';
-import MainHeader from "./components/MainHeader";
+import MainTab from "./components/Tabs/MainTab/MainTab";
 import CreatePost from './components/Tabs/CreateTab/CreatePost';
 import CreateButton from './components/CreateButton';
+import Header from './components/Header/Header';
 
 class App extends Component {
   render() {
@@ -14,10 +14,10 @@ class App extends Component {
       <div id='container'>
         <BrowserRouter>
           <Route exact path="/">
-            <MainHeader />
-            <Main />
+            <Header/>
+            <MainTab />
             <CreateButton />
-        </Route>
+          </Route>
           <Route exact path="/signin"><SignIn /></Route>
           <Route exact path="/signup"><SignUp /></Route>
           <Route exact path="/create"><CreatePost /></Route>
