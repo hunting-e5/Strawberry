@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ItemLists from "./components/itemlist/list";
-import './Css/Main.css';
+import './css/Main.css';
 
 class Main extends Component {
     constructor(props) {
@@ -42,18 +42,17 @@ class Main extends Component {
             !item.isDemand
         ))
         return (
-            <div class = 'main_wrap'>
-                <div class = 'main'>
-                    <div class = 'list_text'>빌려주세요 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ</div>
-                    <div id = 'demands'>
-                        <ItemLists list = {demandItems}/>
+            <div class='main_wrap'>
+                <div class='main'>
+                    <div class='list_text'>빌려주세요 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ</div>
+                    <div id='demands'>
+                        <ItemLists list={demandItems} />
                     </div>
-                    <div class = 'list_text'>빌려가세요~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
-                    <div id = 'supplies'>
-                        <ItemLists list = {supplyItems}/>
+                    <div class='list_text'>빌려가세요~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+                    <div id='supplies'>
+                        <ItemLists list={supplyItems} />
                     </div>
                 </div>
-                
             </div>
         );
     }

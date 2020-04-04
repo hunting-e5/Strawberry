@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import cssBaseline from '@material-ui/core/cssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -50,7 +50,7 @@ export default function SignIn() {
 
   return (
     <Container component="main" maxWidth="xs">
-      <CssBaseline />
+      <cssBaseline />
       <div className={classes.paper}>
         <Typography component="h1" variant="h5">
           로그인
@@ -98,7 +98,7 @@ export default function SignIn() {
             </Grid>
             <Grid item>
               <Link href="#" variant="body2"
-              component={NavLink} to='/signup'>
+                component={NavLink} to='/signup'>
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>

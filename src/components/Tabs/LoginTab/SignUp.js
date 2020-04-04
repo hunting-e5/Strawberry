@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import cssBaseline from '@material-ui/core/cssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -51,7 +51,7 @@ export default function SignUp() {
 
   return (
     <Container component="main" maxWidth="xs">
-      <CssBaseline />
+      <cssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
         </Avatar>
@@ -125,7 +125,7 @@ export default function SignUp() {
           <Grid container justify="flex-end">
             <Grid item>
               <Link href="#" variant="body2"
-              component={NavLink} to='/signin'>
+                component={NavLink} to='/signin'>
                 Already have an account? Sign in
               </Link>
             </Grid>

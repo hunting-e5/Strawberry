@@ -16,14 +16,13 @@ const style = {
 class CreateButton extends Component {
     render() {
         return (
-            <NavLink exact to={'create'}>
-                <MuiThemeProvider>
+            <MuiThemeProvider>
+                <NavLink exact to={'/create'}>
                     <FloatingActionButton style={style}>
                         <ContentAdd />
                     </FloatingActionButton>
-                </MuiThemeProvider>
-            </NavLink>
-
+                </NavLink>
+            </MuiThemeProvider>
         );
     }
 }
