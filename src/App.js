@@ -4,8 +4,7 @@ import { Route, BrowserRouter } from 'react-router-dom';
 import SignIn from './components/Tabs/LoginTab/SignIn';
 import SignUp from './components/Tabs/LoginTab/SignUp';
 import Main from './main';
-import Header from "./components/Header";
-import Category from "./components/Category";
+import Header from "./components/MainHeader";
 import Check from "./components/itemlist/check";
 
 class App extends Component {
@@ -15,7 +14,6 @@ class App extends Component {
       <BrowserRouter>
         <Route exact path="/">
           <Header/>
-          <Category/>
           <Main />
           </Route>
         <Route exact path="/signin"><SignIn /></Route>

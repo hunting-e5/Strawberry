@@ -1,11 +1,28 @@
 #header {
-    margin: 10px 300px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    width: 1280px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#default {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 #logo_wrap {
-    display : inline-block;
     width : 100px;
-    height: 100px;
+    height: 100%;
+    margin-right: 20px;
 }
 
 #logo {
@@ -14,45 +31,42 @@
 }
 
 #search_wrap {
-    position: absolute;
-    left: 500px;
-    top: 25px;
-    margin: 20px 0 5px 0;
-    display: inline-block;
+    display: flex;
+    margin: auto 0;
     width: 550px;
     height: 50px;
+    padding: 0 10px;
     border-radius: 6px;
     border: palevioletred 3px solid;
 }
 
 #searchBox {
-    width: 85%;
+    margin: auto 0;
+    width: 90%;
     height: 80%;
-    margin: 5px 0;
     border: none;
     text-decoration: none;
-    padding-left: 10px;
     outline: 0;
 }
 
 #search_icon{
-    position: absolute;
-    right: 12px;
-    top: 7px;
+    margin: auto auto;
     width : 35px;
     height: 35px;
 }
 
 #login_wrap {
-    position: relative;
-    left: 840px;
-    bottom: 10px;
+    margin-left: 100px;
+    margin-top: 40px;
+    width: 140px;
 }
 
-.login{
+.login_button{
+    width: 50%;
+    padding-top: 40%;
+    height: 100%;
     border: none;
     background: none;
     cursor: pointer;
     outline: 0;
-    margin-right: 10px;
 }
