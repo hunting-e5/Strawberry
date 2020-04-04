@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { RaisedButton, TextField } from 'material-ui';
 import { NavLink, Link } from 'react-router-dom'
+import { connect } from 'react-redux';
 
 class CreatePost extends Component {
     render() {
@@ -32,9 +33,9 @@ class CreatePost extends Component {
                 }} /><br />
 
                 <NavLink exact to={'/'}>
-                    <RaisedButton label="방 개설" onClick={function () {
+                    <RaisedButton label="글 올리기" onClick={function () {
                         if (title == undefined) {
-                            window.alert('다시 입력하세요!');
+                            window.alert('제목을 입력하세요!');
                         }
                         console.log(title, desc, price, category);
                     }.bind(this)} />
@@ -45,3 +46,13 @@ class CreatePost extends Component {
 }
 
 export default CreatePost;
+// export default connect(
+//     null,
+//     function (dispatch) {
+//         return {
+//             onClick: function (postId, title, desc, price, category, src) {
+//                 dispatch({ postId, title, desc, price, category, src})
+//             }
+//         }
+//     }
+// )(CreatePost);
