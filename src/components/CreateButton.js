@@ -7,14 +7,13 @@ import { NavLink } from 'react-router-dom'
 class CreateButton extends Component {
     render() {
         return (
-            <NavLink exact to={'create'}>
-                <MuiThemeProvider>
+            <MuiThemeProvider>
+                <NavLink exact to={'/create'}>
                     <FloatingActionButton style={style}>
                         <ContentAdd />
                     </FloatingActionButton>
-                </MuiThemeProvider>
-            </NavLink>
-
+                </NavLink>
+            </MuiThemeProvider>
         );
     }
 }
@@ -25,7 +24,7 @@ const style = {
     margin: 0,
     top: 'auto',
     right: 20,
-    bottom: 80,
+    bottom: 40,
     left: 'auto',
     position: 'fixed',
 };

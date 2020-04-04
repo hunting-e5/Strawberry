@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { RaisedButton, TextField } from 'material-ui';
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 class CreatePost extends Component {
     render() {
-        var postId, title, desc, price, category, src;
-        var isDemand = false;
+        var title, desc, price, category;
         desc = ".";
         category = "기타";
-        src = "";
         price = "미정";
 
         return (
             <MuiThemeProvider>
-
                 <TextField floatingLabelText="제목" onChange={function (e, text) {
                     title = text
                 }} /><br />
@@ -33,11 +30,11 @@ class CreatePost extends Component {
 
                 <NavLink exact to={'/'}>
                     <RaisedButton label="방 개설" onClick={function () {
-                        if (title == undefined) {
+                        if (title === undefined) {
                             window.alert('다시 입력하세요!');
                         }
                         console.log(title, desc, price, category);
-                    }.bind(this)} />
+                    }} />
                 </NavLink>
             </MuiThemeProvider>
         );

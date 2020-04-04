@@ -53,7 +53,6 @@ class Main extends Component {
                         <ItemLists list = {supplyItems}/>
                     </div>
                 </div>
-                
             </div>
         );
     }

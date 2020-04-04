@@ -9,7 +9,7 @@ function MainHeader() {
     return (
         <div id = "header_wrap">
           <div id = 'header'>
-            <div id = "default">
+            <div id = "top_banner">
               <Logo />
               <SearchBox />
               <Login />
