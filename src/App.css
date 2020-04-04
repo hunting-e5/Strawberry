@@ -16,3 +16,7 @@ dl,ul,ol,menu,li {list-style:none}
     flex-direction: column;
     justify-content: center;
 }
+#FaIcon{
+    width: 30px;
+    height:30px;
+}

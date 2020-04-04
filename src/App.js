@@ -7,6 +7,7 @@ import Main from './main';
 import Header from "./components/MainHeader";
 import CreatePost from './components/Tabs/CreateTab/CreatePost';
 import CreateButton from './components/CreateButton';
+import Check from "./components/itemlist/check";
 
 class App extends Component {
   render() {
