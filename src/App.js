@@ -6,7 +6,6 @@ import SignUp from './components/Tabs/LoginTab/SignUp';
 import Main from './main';
 import Header from "./components/MainHeader";
 import Check from "./components/itemlist/check";
-
 class App extends Component {
   render(){
     return (
