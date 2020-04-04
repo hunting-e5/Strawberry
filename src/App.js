@@ -5,6 +5,8 @@ import SignIn from './components/Tabs/LoginTab/SignIn';
 import SignUp from './components/Tabs/LoginTab/SignUp';
 import Main from './main';
 import Header from "./components/MainHeader";
+import CreatePost from './components/CreatePost';
+import CreateButton from './components/CreatePost';
 
 class App extends Component {
   render(){
@@ -14,9 +16,11 @@ class App extends Component {
         <Route exact path="/">
           <Header/>
           <Main />
-          </Route>
+          <CreateButton/>>
+        </Route>
         <Route exact path="/signin"><SignIn /></Route>
         <Route exact path="/signup"><SignUp /></Route>
+        <Route exact path="/create"><CreatePost/></Route>
       </BrowserRouter>
       </div>
     );
