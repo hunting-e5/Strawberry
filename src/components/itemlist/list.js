@@ -6,6 +6,7 @@ import ItemCards from "../stories/Card";
 //import ItemsCarousel from 'react-items-carousel';
 
 const ItemList=(props)=> {
+  
     const [activeItemIndex, setActiveItemIndex] = useState(0);
     const chevronWidth = 40;
     const responsive = {
@@ -25,6 +26,7 @@ const ItemList=(props)=> {
           partialVisibilityGutter: 30 // this is needed to tell the amount of px that should be visible.
         }
       }
+    
     return (
         <ul style={{ padding: `0 ${chevronWidth}px` }}>
                   <Carousel className="mylist"

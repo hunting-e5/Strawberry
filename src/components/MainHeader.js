@@ -7,13 +7,13 @@ import MainCategory from './MainCategory';
 
 function MainHeader() {
     return (
-        <div id = "header">
-          <div id = "default">
-            <Logo />
-            <SearchBox />
-            <Login />
-          </div>
-          <div>
+        <div id = "header_wrap">
+          <div id = 'header'>
+            <div id = "default">
+              <Logo />
+              <SearchBox />
+              <Login />
+            </div>
             <MainCategory />
           </div>
         </div>

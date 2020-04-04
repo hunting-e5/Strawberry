@@ -7,10 +7,10 @@ class Login extends Component {
         return (
             <span id = 'login_wrap'>
                 <NavLink exact to = {'signin'}>
-                    <button class = 'login'>로그인</button>
+                    <button class = 'login_button'>로그인</button>
                 </NavLink>
                 <NavLink exact to = {'signup'}>
-                    <button class = 'login'>회원가입</button>
+                    <button class = 'login_button'>회원가입</button>
                 </NavLink>
             </span>
         )

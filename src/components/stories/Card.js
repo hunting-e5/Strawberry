@@ -79,9 +79,6 @@ var ItemCard=(props) => {
         <IconButton aria-label="add to favorites">
           <FavoriteIcon onClick={function(e){
             e.preventDefault();
-            props.lists.setState({
-              mode:'Favorite'
-            });
           }.bind(this)}>
           </FavoriteIcon>{props.lists.FaNum}
         </IconButton>
@@ -89,7 +86,7 @@ var ItemCard=(props) => {
           <ShareIcon />
         </IconButton>
         <IconButton aria-label="add to">
-        <FavorIcon onClick={function(e){
+        <FavorIcon id="FavorIcon" onClick={function(e){
           debugger;
           }}></FavorIcon>
         </IconButton>
