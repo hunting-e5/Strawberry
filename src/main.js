@@ -27,19 +27,31 @@ class Main extends Component {
                 console.log(error);
             });
     }
+
     render() {
+        var items = [];
+        var demandItems = [];
+        var supplyItems = [];
+        items = this.state.ItemList.filter(item => (
+            item.category === this.state.category
+        ))
+        demandItems = items.filter(item => (
+            item.isDemand
+        ))
+        supplyItems = items.filter(item => (
+            !item.isDemand
+        ))
         return (
-            <div id = 'main_wrap'>
-                <div id = 'main'>
-                    {this.state.ItemList.length > 0 ? (
-                        <ItemLists list={this.state.ItemList.filter(item => (
-                            item.category === this.state.category
-                        ))}/>
-                    ) : (
-                            <span>
-                                Loading..
-                            </span>
-                    )}
+            <div class = 'main_wrap'>
+                <div class = 'main'>
+                    <div class = 'list_text'>빌려주세요 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ</div>
+                    <div id = 'demands'>
+                        <ItemLists list = {demandItems}/>
+                    </div>
+                    <div class = 'list_text'>빌려가세요~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+                    <div id = 'supplies'>
+                        <ItemLists list = {supplyItems}/>
+                    </div>
                 </div>
             </div>
         );
