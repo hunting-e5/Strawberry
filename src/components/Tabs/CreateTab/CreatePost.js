@@ -29,9 +29,9 @@ class CreatePost extends Component {
                 }} /><br />
 
                 <NavLink exact to={'/'}>
-                    <RaisedButton label="방 개설" onClick={function () {
-                        if (title === undefined) {
-                            window.alert('다시 입력하세요!');
+                    <RaisedButton label="글 올리기" onClick={function () {
+                        if (title == undefined) {
+                            window.alert('제목을 입력하세요!');
                         }
                         console.log(title, desc, price, category);
                     }} />
@@ -42,3 +42,13 @@ class CreatePost extends Component {
 }
 
 export default CreatePost;
+// export default connect(
+//     null,
+//     function (dispatch) {
+//         return {
+//             onClick: function (postId, title, desc, price, category, src) {
+//                 dispatch({ postId, title, desc, price, category, src})
+//             }
+//         }
+//     }
+// )(CreatePost);

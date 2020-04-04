@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ItemCards from "../stories/Card";
 //import ItemsCarousel from 'react-items-carousel';
 
 const ItemList=(props)=> {
@@ -27,34 +28,35 @@ const ItemList=(props)=> {
       }
     
     return (
-      <ul style={{ padding: `0 ${chevronWidth}px` }}>
-        <Carousel className="mylist"
-          requestToChangeActive={setActiveItemIndex}
-          activeItemIndex={activeItemIndex} 
-          //numberOfCards={3}
-          partialVisible={false}  //잘려서 보이게 할 것인가?
-          responsive={responsive}
-          gutter={20}
-          leftChevron={<button><strong>{'<'}</strong></button>}
-          rightChevron={<button><strong>{'>'}</strong></button>}
-          outsideChevron
-          chevronWidth={chevronWidth}
-        >
-          {props.list.map((lists) =>
-          <li className="list_items" key={lists.id}>
-              <Link to="/" className="link_items">
-              <img src={lists.src} className="img_items" alt={lists.title}/>
-              <div className="info_items">
-                  <strong className="tit_items">
-                      제품명 : {lists.title} <p></p>
-                  </strong>
-                  제품 가격 : {lists.price}
-              </div>
-              </Link>
-          </li>
-          )}
-        </Carousel>
-      </ul>
+        <ul style={{ padding: `0 ${chevronWidth}px` }}>
+                  <Carousel className="mylist"
+        requestToChangeActive={setActiveItemIndex}
+        activeItemIndex={activeItemIndex}
+        //numberOfCards={3}
+        partialVisible={false}
+        responsive={responsive}
+        gutter={20}
+        leftChevron={<button><strong>{'<'}</strong></button>}
+        rightChevron={<button><strong>{'>'}</strong></button>}
+        outsideChevron
+        chevronWidth={chevronWidth}
+      >
+        {props.list.map((lists) =>
+        <li className="list_items" key={lists.id}>
+            <Link to="/" className="link_items">
+            <ItemCards lists={lists}></ItemCards>
+            {/* <img src={lists.src} className="img_items" alt={lists.title}/>
+            <div className="info_items">
+                <strong className="tit_items">
+                    제품명 : {lists.title} <p></p>
+                </strong>
+                제품 가격 : {lists.price}
+            </div> */}
+            </Link>
+        </li>
+        )}
+      </Carousel>
+        </ul>
     );
 }
 
