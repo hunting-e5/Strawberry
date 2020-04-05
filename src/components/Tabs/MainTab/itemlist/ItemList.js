@@ -45,13 +45,6 @@ const ItemList = (props) => {
           <li className="list_items" key={lists.id}>
             <Link to={'/item?id='+lists.id} className="link_items">
               <ItemCards lists={lists}></ItemCards>
-              {/* <img src={lists.src} className="img_items" alt={lists.title}/>
-            <div className="info_items">
-                <strong className="tit_items">
-                    제품명 : {lists.title} <p></p>
-                </strong>
-                제품 가격 : {lists.price}
-            </div> */}
             </Link>
           </li>
         )}

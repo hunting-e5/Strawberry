@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ItemList from "./itemlist/ItemList";
-import './Itemlist.css';
+import './MainItemlist.css';
 
 class MainItemList extends Component {
     constructor(props) {

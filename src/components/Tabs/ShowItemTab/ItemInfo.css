@@ -8,13 +8,13 @@
 }
 
 .demand {
-
+    display: flex;
 }
 
 .supply {
-
+    display: flex;
 }
 
 .price {
-    
+    display: flex;
 }
