@@ -43,7 +43,7 @@ const ItemList = (props) => {
       >
         {props.list.map((lists) =>
           <li className="list_items" key={lists.id}>
-            <Link to="/" className="link_items">
+            <Link to={'/item?id='+lists.id} className="link_items">
               <ItemCards lists={lists}></ItemCards>
               {/* <img src={lists.src} className="img_items" alt={lists.title}/>
             <div className="info_items">

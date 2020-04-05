@@ -7,17 +7,19 @@ import MainTab from "./components/Tabs/MainTab/MainTab";
 import CreatePost from './components/Tabs/CreateTab/CreatePost';
 import CreateButton from './components/CreateButton';
 import Header from './components/Header/Header';
+import ShowItemTab from './components/Tabs/ShowItemTab/ShowItemTab';
 
 class App extends Component {
   render() {
     return (
       <div id='container'>
         <BrowserRouter>
+          <Header/>
           <Route exact path="/">
-            <Header/>
             <MainTab />
             <CreateButton />
           </Route>
+          <Route exact path='/item' component={ShowItemTab} />
           <Route exact path="/signin"><SignIn /></Route>
           <Route exact path="/signup"><SignUp /></Route>
           <Route exact path="/create"><CreatePost /></Route>

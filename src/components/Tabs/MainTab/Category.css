@@ -1,16 +1,19 @@
+/* category 부분에 대한 css 파일 -th */
+
 #category_wrap {
     background-color: white;
     border: 1px solid lightgray;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 1280px;
+    margin: 0 auto;
 }
 .button_wrap {
     margin-right: auto;
     width: 120px;
     height: 25px;
 }
-.category {
+.category_button {
     border: none;
     background: none;
     cursor: pointer;

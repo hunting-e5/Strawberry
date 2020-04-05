@@ -6,10 +6,8 @@ import { NavLink } from 'react-router-dom'
 
 const style = {
     margin: 0,
-    top: 'auto',
     right: 20,
-    bottom: 80,
-    left: 'auto',
+    bottom: 40,
     position: 'fixed',
 };
 

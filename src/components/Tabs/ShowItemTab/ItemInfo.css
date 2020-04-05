@@ -1,0 +1,20 @@
+/* 상품 정보를 보여주는 부분에 대한 css 파일 */
+
+.itemInfo_wrap {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 8%;
+}
+
+.demand {
+
+}
+
+.supply {
+
+}
+
+.price {
+    
+}
