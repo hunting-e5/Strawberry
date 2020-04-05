@@ -6,7 +6,7 @@ function Supply(props) {
 
     return (
         <div class = 'supply'>
-            '가져가세요!'
+            가져가세요!
             <div class = 'price'>
                 가격: {item.price}원
             </div>
