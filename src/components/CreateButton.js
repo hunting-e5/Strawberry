@@ -4,17 +4,23 @@ import ContentAdd from 'material-ui/svg-icons/content/add';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { NavLink } from 'react-router-dom'
 
+const style = {
+    margin: 0,
+    right: 20,
+    bottom: 40,
+    position: 'fixed',
+};
+
 class CreateButton extends Component {
     render() {
         return (
-            <NavLink exact to={'create'}>
-                <MuiThemeProvider>
+            <MuiThemeProvider>
+                <NavLink exact to={'/create'}>
                     <FloatingActionButton style={style}>
                         <ContentAdd />
                     </FloatingActionButton>
-                </MuiThemeProvider>
-            </NavLink>
-
+                </NavLink>
+            </MuiThemeProvider>
         );
     }
 }

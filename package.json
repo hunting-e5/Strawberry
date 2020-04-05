@@ -10,12 +10,17 @@
     "@testing-library/user-event": "7.2.1",
     "axios": "0.19.2",
     "material-ui": "0.20.2",
+    "query-string": "6.11.1",
     "react": "16.13.1",
     "react-dom": "^16.13.1",
     "react-multi-carousel": "2.5.4",
     "react-router-dom": "5.1.2",
     "react-scripts": "3.4.1",
+<<<<<<< HEAD
     "redux": "4.0.5"
+=======
+    "redux": "^4.0.5"
+>>>>>>> 72b79932f4b1fd0ee785309a98c360b3c836129a
   },
   "scripts": {
     "start": "react-scripts start",

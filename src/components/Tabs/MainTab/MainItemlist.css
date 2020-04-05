@@ -1,9 +1,11 @@
-.main_wrap{
+/* itemlist 부분에 대한 css 파일 -th */
+
+.itemlist_wrap {
     display: flex;
     justify-content: center;
 }
 
-.main {
+.itemlist {
     display: block;
     width: 1280px;
 }
@@ -15,10 +17,10 @@
     padding-bottom: 10px;
 }
 
-#demands {
+.demands {
     display: block;
 }
 
-#supplies {
+.supplies {
     display: block;
 }
