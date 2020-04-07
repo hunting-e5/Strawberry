@@ -1,5 +1,5 @@
 import React from "react"
-import store from '../../store';
+import store from '../../../../store';
 class FavorIcon extends React.Component {
 	constructor (props) {
 		super (props)

@@ -1,6 +1,8 @@
+//태형 2020-04-07 21:40 수정
+
 import React, { Component } from 'react';
-import ItemLists from "./itemlist/ItemList";
-import './Main.css';
+import ItemList from "./itemlist/ItemList";
+import './MainItemList.css';
 
 class MainItemList extends Component {
     constructor(props) {
@@ -20,14 +22,11 @@ class MainItemList extends Component {
             .catch(err => console.log(err));
     }
 
-
     callApi = async () => {
         const response = await fetch('/api/posts');
         const body = await response.json();
         return body; //비동기 방식으로 처리. response 기다리는 동안 다른 정보 가져오기
     }
-
-
 
     /* public 디렉토리의 dummy 데이터 가져오기 */
     // componentDidMount() {
@@ -51,26 +50,24 @@ class MainItemList extends Component {
     // }
 
     render() {
-        var demandPosts = [];
-        var supplyPosts = [];
-        demandPosts = this.state.demandPostList.filter(post => (
+        var demandPosts = this.state.demandPostList.filter(post => (
             post.category === this.state.category
         ))
 
-        supplyPosts = this.state.supplyPostList.filter(post => (
+        var supplyPosts = this.state.supplyPostList.filter(post => (
             post.category === this.state.category
         ))
 
         return (
-            <div class='main_wrap'>
-                <div class='main'>
+            <div class='mainItemList_wrap'>
+                <div class='mainItemList'>
                     <div class='list_text'>빌려주세요 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ</div>
                     <div id='demands'>
-                        <ItemLists list={demandPosts} />
+                        <ItemList list={demandPosts} />
                     </div>
                     <div class='list_text'>빌려가세요~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
                     <div id='supplies'>
-                        <ItemLists list={supplyPosts} />
+                        <ItemList list={supplyPosts} />
                     </div>
                 </div>
             </div>

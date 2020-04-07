@@ -1,4 +1,5 @@
 /* 물품 선택시 보여지는 화면 */
+/* 태형 수정 */
 
 import React, { Component } from 'react';
 import axios from 'axios';

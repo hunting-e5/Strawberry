@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ItemCards from "./ItemCard";
+import ItemCard from "./ItemCard";
 //import ItemsCarousel from 'react-items-carousel';
 
 const ItemList = (props) => {
@@ -41,10 +41,10 @@ const ItemList = (props) => {
         outsideChevron
         chevronWidth={chevronWidth}
       >
-        {props.list.map((lists) =>
-          <li className="list_items" key={lists.id}>
-            <Link to={'/item?id='+lists.id} className="link_items">
-              <ItemCards lists={lists}></ItemCards>
+        {props.list.map((list) =>
+          <li className="list_items" key={list.id}>
+            <Link to={'/item?id='+list.id} className="link_items">
+              <ItemCard list={list}></ItemCard>
             </Link>
           </li>
         )}

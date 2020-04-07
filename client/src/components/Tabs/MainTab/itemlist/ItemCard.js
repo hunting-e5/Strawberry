@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     padding:10
   },
   media: {
-    height: 0,
+    width: '100%',
     paddingTop: '56.25%', // 16:9
   },
   expand: {
@@ -65,29 +65,29 @@ var ItemCard=(props) => {
   return (
     <Card className={classes.root}>
       <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}> {/*글 쓴 사람 동그란 프로필*/}
-            {props.post.writer} 
-          </Avatar>
-        }
+        // avatar={ 나중에 writer 생기면 주석 풀기 -th
+        //   <Avatar aria-label="recipe" className={classes.avatar}> {/*글 쓴 사람 동그란 프로필*/}
+        //     {props.list.writer} 
+        //   </Avatar>
+        // }
 
         action={
           <IconButton aria-label="settings">
             <MoreVertIcon />
           </IconButton>
         }
-        title={props.post.title}
-        subheader={props.post.date}
+        title={props.list.title}
+        // subheader={props.list.date} 나중에 date 생기면 주석 풀기 -th
       />
 
       <CardMedia
         className={classes.media}
-        image={props.post.src}
-        title={props.post.title}
+        image={props.list.src}
+        title={props.list.title}
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          {props.post.price}
+          {props.list.price}
         </Typography>
       </CardContent>
 
@@ -98,7 +98,7 @@ var ItemCard=(props) => {
             // 좋아요 누르기 구현
           }}>
           </FavoriteIcon>
-          {props.post.FaNum}
+          {props.list.FaNum}
         </IconButton>
 
         <IconButton aria-label="share">
@@ -124,9 +124,9 @@ var ItemCard=(props) => {
 
       <Collapse in={expanded} timeout="auto" unmountOnExit> {/*상세설명*/}
 
-        <CardContent>
-          <Typography paragraph>{props.post.desc}:</Typography>
-        </CardContent>
+        {/* <CardContent> 나중에 desc 생기면 주석 풀기 -th
+          <Typography paragraph>{props.list.desc}:</Typography>
+        </CardContent> */}
 
       </Collapse>
     </Card>
