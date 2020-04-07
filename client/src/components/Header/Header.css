@@ -25,6 +25,11 @@
     align-items: center;
 }
 
+.menu_wrap {
+    position: relative;
+    margin-right: 40px;
+}
+
 #logo_wrap {
     width : 70px;
     height: 100%;
