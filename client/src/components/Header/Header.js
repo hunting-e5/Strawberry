@@ -9,9 +9,9 @@ function Header() {
         <div id="header_wrap">
             <div id='header'>
                 <div id="top_banner">
-                            <Logo />
-                            <SearchBox />
-                            <Login />
+                    <Logo />
+                    <SearchBox />
+                    <Login />
                 </div>
             </div>
         </div>

@@ -1,0 +1,11 @@
+/* ShowItemTab에 대한 css 파일 */
+
+.showitem_wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.showitem {
+    display: flex;
+    width: 1280px;
+}

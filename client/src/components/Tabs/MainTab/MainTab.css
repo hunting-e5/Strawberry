@@ -1,0 +1,7 @@
+/* category 와 listitem을 감싸는 부분에 대한 css 파일 -th */
+
+.main_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

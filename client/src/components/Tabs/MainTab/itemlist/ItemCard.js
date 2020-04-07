@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React, {Component} from 'react';
+import { makeStyles, responsiveFontSizes } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -16,7 +16,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import FavorIcon from"./FavorIcon";
-
+import axios from 'axios';
 const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 345,
@@ -40,11 +40,24 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: red[500],
   },
 }));
+function _getList() {
+  const apiUrl = 'dummy/ItemList.json';
+  axios.get(apiUrl)
+      .then(data => { //가지고 온 리스트를 저장
+          this.setState({
+              ItemList: data.data.ItemList,
+              category: 'life'
+          });
+      })
+      .catch(error => {
+          console.log(error);
+      });
+}
 
 var ItemCard=(props) => {
+
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -80,12 +93,15 @@ var ItemCard=(props) => {
 
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
+<<<<<<< HEAD:client/src/components/Tabs/MainTab/itemlist/ItemCard.js
           <FavoriteIcon onClick={function(e){
             e.preventDefault();
             // 좋아요 누르기 구현
           }}>
           </FavoriteIcon>
           {props.post.FaNum}
+=======
+>>>>>>> ac4eb542d4ec37c92ec8d1b2dc4952761307bf98:src/components/stories/Card.js
         </IconButton>
 
         <IconButton aria-label="share">
@@ -93,9 +109,7 @@ var ItemCard=(props) => {
         </IconButton>
 
         <IconButton aria-label="add to">
-        <FavorIcon id="FavorIcon" onClick={function(e){
-          debugger;
-          }}></FavorIcon>
+        <FavorIcon type='button' ></FavorIcon>
         </IconButton>
 
         <IconButton
@@ -114,7 +128,19 @@ var ItemCard=(props) => {
       <Collapse in={expanded} timeout="auto" unmountOnExit> {/*상세설명*/}
 
         <CardContent>
+<<<<<<< HEAD:client/src/components/Tabs/MainTab/itemlist/ItemCard.js
           <Typography paragraph>{props.post.desc}:</Typography>>
+=======
+          <Typography paragraph>Method:</Typography>
+          <Typography paragraph>
+            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
+            minutes.
+          </Typography>
+          <Typography paragraph>
+       ragrant, about 10 minutes. Add
+            saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
+          </Typography>
+>>>>>>> ac4eb542d4ec37c92ec8d1b2dc4952761307bf98:src/components/stories/Card.js
         </CardContent>
 
       </Collapse>
