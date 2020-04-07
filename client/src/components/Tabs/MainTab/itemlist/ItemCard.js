@@ -93,15 +93,12 @@ var ItemCard=(props) => {
 
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-<<<<<<< HEAD:client/src/components/Tabs/MainTab/itemlist/ItemCard.js
           <FavoriteIcon onClick={function(e){
             e.preventDefault();
             // 좋아요 누르기 구현
           }}>
           </FavoriteIcon>
           {props.post.FaNum}
-=======
->>>>>>> ac4eb542d4ec37c92ec8d1b2dc4952761307bf98:src/components/stories/Card.js
         </IconButton>
 
         <IconButton aria-label="share">
@@ -128,19 +125,7 @@ var ItemCard=(props) => {
       <Collapse in={expanded} timeout="auto" unmountOnExit> {/*상세설명*/}
 
         <CardContent>
-<<<<<<< HEAD:client/src/components/Tabs/MainTab/itemlist/ItemCard.js
-          <Typography paragraph>{props.post.desc}:</Typography>>
-=======
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-            minutes.
-          </Typography>
-          <Typography paragraph>
-       ragrant, about 10 minutes. Add
-            saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-          </Typography>
->>>>>>> ac4eb542d4ec37c92ec8d1b2dc4952761307bf98:src/components/stories/Card.js
+          <Typography paragraph>{props.post.desc}:</Typography>
         </CardContent>
 
       </Collapse>

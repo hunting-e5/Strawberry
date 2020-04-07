@@ -26,12 +26,3 @@ class CreateButton extends Component {
 }
 
 export default CreateButton;
-
-const style = {
-    margin: 0,
-    top: 'auto',
-    right: 20,
-    bottom: 80,
-    left: 'auto',
-    position: 'fixed',
-};
