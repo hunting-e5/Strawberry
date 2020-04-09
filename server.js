@@ -23,6 +23,12 @@ var demandPostList= [{
     "price": 2,
     "category": "life",
     "FaNum" :0,
+},{
+    "id":5,
+    "title": "무좀 빌려줘",
+    "price": 30,
+    "category": "life",
+    "FaNum" :0,
 },]
 
 const express = require('express');
