@@ -16,7 +16,7 @@ var supplyPostList = [{
 var demandPostList = [{
     "id":3,
     "title": "차 좀 빌려줘",
-    "price": 500,
+    "price": 200,
     "category": "life",
     "FaNum" :0,
 },{
