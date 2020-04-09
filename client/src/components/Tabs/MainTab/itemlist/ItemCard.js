@@ -17,6 +17,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import FavorIcon from"./FavorIcon";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 345,
@@ -79,12 +80,13 @@ var ItemCard=(props) => {
         title={props.list.title}
         // subheader={props.list.date} 나중에 date 생기면 주석 풀기 -th
       />
-
+      <Link to={'/item?id='+props.list.id} className="link_items">
       <CardMedia
         className={classes.media}
         image={props.list.src}
         title={props.list.title}
       />
+      </Link>
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
           {props.list.price}

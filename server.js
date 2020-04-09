@@ -1,6 +1,4 @@
-//태형 2020-04-07 21:40 수정
-
-var supplyPostList = [{
+var supplyPostList= [{
     "id": 1,
     "title": "차 좀 빌려가",
     "price": 500,
@@ -13,16 +11,16 @@ var supplyPostList = [{
     "category": "life",
     "FaNum" :0,
     },]
-var demandPostList = [{
+var demandPostList= [{
     "id":3,
     "title": "차 좀 빌려줘",
-    "price": 500,
+    "price": 400,
     "category": "life",
     "FaNum" :0,
 },{
     "id":4,
     "title": "책 좀 빌려줘",
-    "price": 300,
+    "price": 2,
     "category": "life",
     "FaNum" :0,
 },]
@@ -36,6 +34,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/api/posts', (req, res) => {
     // res.send({ message: 'server is running!' });
     res.json({supplyPostList: supplyPostList, demandPostList: demandPostList});
-
 });
 app.listen(port, () => console.log(`Listening on port ${port}`));
