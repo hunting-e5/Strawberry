@@ -42,7 +42,6 @@ class CreateDemandPost extends Component {
             nego: Number(this.state.nego),
             imgSrc: this.state.imgSrc,
             description: this.state.description,
-            numLikes: 0,
             demandPostTitle: this.state.demandPostTitle,
             demandPostLocation: this.state.demandPostLocation,
             demandPostPrice: Number(this.state.demandPostPrice)
