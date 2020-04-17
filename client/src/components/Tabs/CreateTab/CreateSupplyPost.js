@@ -8,7 +8,16 @@ class CreatePost extends Component {
     constructor(props){
         super(props);
         this.state = {
-            
+            createdUserID: '',
+            postCategoryID: '',
+            nego: '',
+            imgSrc: 'www',
+            description: '',
+            numLikes: 0,
+            demandPostTitle: '',
+            demandPostLocation: '',
+            demandPostPrice: 0,
+            thingState:''
         }
     }
     
