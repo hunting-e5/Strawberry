@@ -24,10 +24,12 @@ class CreatePost extends Component {
     render() {
         return (
             <div>
-                상품제목
-                상품이미지
-                상품가격
-                빌려주기 or 빌리기
+                <form>
+                    <input type = 'text' name = 'title' placeholder = '제목을 입력하세요' />
+                    <input type = 'text' name = 'description' placeholder = '내용을 입력하세요' />
+                    <input type = 'text' name = 'price' placeholder = '가격을 입력하세요' />
+                    <input type = 'text' name = 'location' placeholder = '위치을 입력하세요' />
+                </form>
             </div>
         );
     }

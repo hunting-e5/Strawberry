@@ -4,7 +4,7 @@ import { Route, BrowserRouter } from 'react-router-dom';
 import SignIn from './components/Tabs/LoginTab/SignIn';
 import SignUp from './components/Tabs/LoginTab/SignUp';
 import MainTab from "./components/Tabs/MainTab/MainTab";
-import CreatePost from './components/Tabs/CreateTab/CreatePost';
+import CreateDemandPost from './components/Tabs/CreateTab/CreateDemandPost';
 import CreateButton from './components/CreateButton';
 import Header from './components/Header/Header';
 import ShowItemTab from './components/Tabs/ShowItemTab/ShowItemTab';
