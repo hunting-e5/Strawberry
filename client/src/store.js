@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 
 var initstate = {
-    currentUserId: "user1",
+    currentUserId: 1,
 }
 
 export default createStore(function(state=initstate, action){
