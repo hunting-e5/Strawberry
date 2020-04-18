@@ -1,6 +1,7 @@
-/* 2020-04-09 21:34 태형 수정 */
+/* 2020-04-18 15:38 태형 수정 */
 
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 
 const axios = require('axios').default;
 
@@ -33,27 +34,31 @@ class CreateDemandPost extends Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit = {this.handleFormSubmit}>
-                    <p>
-                        <input type='text' name='title' value = {this.state.demandPostTitle} placeholder='제목을 입력하세요' onChange={this.handleValueChange} />
-                    </p>
-                    <p>
-                        <input type='text' name='description' value = {this.state.description} placeholder='내용을 입력하세요' onChange={this.handleValueChange} />
-                    </p>
-                    <p>
-                        <input type='text' name='price' value = {this.state.demandPostPrice} placeholder='가격을 입력하세요' onChange={this.handleValueChange}/>
-                    </p>
-                    <p>
-                        <input type='text' name='location' value = {this.state.demandPostLocation} placeholder='위치를 입력하세요' onChange={this.handleValueChange}/>
-                    </p>
-                    <p>
-                        <input type='submit' />
-                    </p>
-                </form>
-            </div>
+            <form onSubmit = {this.handleFormSubmit}>
+                <p>
+                    <input type='text' name='title' placeholder='제목을 입력하세요' onChange={this.handleValueChange} />
+                </p>
+                <p>
+                    <input type='text' name='description' value = {this.state.description} placeholder='내용을 입력하세요' onChange={this.handleValueChange} />
+                </p>
+                <p>
+                    <input type='text' name='price' value = {this.state.demandPostPrice} placeholder='가격을 입력하세요' onChange={this.handleValueChange}/>
+                </p>
+                <p>
+                    <input type='text' name='location' value = {this.state.demandPostLocation} placeholder='위치를 입력하세요' onChange={this.handleValueChange}/>
+                </p>
+                <p>
+                    <input type='submit' />
+                </p>
+            </form>
         );
     }
 }
 
-export default CreateDemandPost;
+export default connect(
+    function(state){
+        return{
+            userID : state.currentUserID   
+        }
+    }
+)(CreateDemandPost);

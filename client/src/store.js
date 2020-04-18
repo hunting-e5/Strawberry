@@ -1,24 +1,18 @@
 import { createStore } from 'redux';
 
 var initstate = {
-    currentUserId: 1,
+    currentUserID: 1,
 }
 
-export default createStore(function(state=initstate, action){
+function reducer(state=initstate, action){
     if(action.type==='userId'){
-        return {currentUserId:action.currentUserId}
+        return {currentUserID: action.currentUserID}
     }
     if(action.type==='favor'){ 
         var userIdList=[];
         return state
     }
     return state;
-},window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
+}
 
-// function reducer(state = initstate, action){
-
-//  return state;
-// }
-
-// export default createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+export default createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())

@@ -21,7 +21,6 @@ class CreateSupplyPost extends Component {
         }
     }
     
-    
     render() {
         return (
             <div>

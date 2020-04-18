@@ -17,7 +17,7 @@ class CreateButton extends Component {
     render() {
         return (
             <MuiThemeProvider>
-                <NavLink exact to={'/createDemand'}>
+                <NavLink exact to={'/create'}>
                     <FloatingActionButton style={style}>
                         <ContentAdd />
                     </FloatingActionButton>
