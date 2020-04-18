@@ -5,6 +5,7 @@ import SignIn from './components/Tabs/LoginTab/SignIn';
 import SignUp from './components/Tabs/LoginTab/SignUp';
 import MainTab from "./components/Tabs/MainTab/MainTab";
 import CreateDemandPost from './components/Tabs/CreateTab/CreateDemandPost';
+import CreateSupplyPost from './components/Tabs/CreateTab/CreateSupplyPost';
 import CreateButton from './components/CreateButton';
 import Header from './components/Header/Header';
 import ShowItemTab from './components/Tabs/ShowItemTab/ShowItemTab';
@@ -27,7 +28,8 @@ class App extends Component {
           <Route exact path='/item' component={ShowItemTab} />
           <Route exact path="/signin"><SignIn /></Route>
           <Route exact path="/signup"><SignUp /></Route>
-          <Route exact path="/create"><CreatePost /></Route>
+          <Route exact path="/createDemand"><CreateDemandPost /></Route>
+          <Route exact path="/createSupply"><CreateSupplyPost /></Route>
         </BrowserRouter>
       </div>
     );

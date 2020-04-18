@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 const axios = require('axios').default;
 
-class CreatePost extends Component {
+class CreateSupplyPost extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -34,4 +34,4 @@ class CreatePost extends Component {
     }
 }
 
-export default CreatePost;
+export default CreateSupplyPost;
