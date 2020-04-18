@@ -11,7 +11,7 @@ class CreatePost extends Component {
             createdUserID: '',
             postCategoryID: '',
             nego: '',
-            imgSrc: '',
+            imgSrc: 'www',
             description: '',
             numLikes: 0,
             demandPostTitle: '',
