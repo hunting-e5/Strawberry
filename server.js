@@ -41,4 +41,8 @@ app.get('/api/posts', (req, res) => {
     // res.send({ message: 'server is running!' });
     res.json({supplyPostList: supplyPostList, demandPostList: demandPostList});
 });
+app.post('/api/demandpost', (req, res) => {
+    res.send(req.body);
+});
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
