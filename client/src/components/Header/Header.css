@@ -25,6 +25,11 @@
     align-items: center;
 }
 
+.menu_wrap {
+    position: relative;
+    margin-right: 40px;
+}
+
 #logo_wrap {
     width : 70px;
     height: 100%;
@@ -55,10 +60,14 @@
     outline: 0;
 }
 
-#search_icon{
+.search_icon_wrap {
     margin: auto auto;
     width : 35px;
     height: 35px;
+}
+
+.search_icon{
+    width: 100%;
 }
 
 #login_wrap {

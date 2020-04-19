@@ -1,0 +1,13 @@
+.select_buttons_wrap {
+
+}
+
+.select_demand_or_supply {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: 0;
+    width: 150px;
+    height: 25px;
+}
+

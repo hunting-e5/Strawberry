@@ -1,3 +1,5 @@
+/* 태형 수정 */
+
 import React from 'react';
 import './ItemInfo.css';
 

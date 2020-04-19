@@ -1,3 +1,5 @@
+//태형 2020-04-07 21:40 수정
+
 import React, { Component } from 'react';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
@@ -26,12 +28,3 @@ class CreateButton extends Component {
 }
 
 export default CreateButton;
-
-const style = {
-    margin: 0,
-    top: 'auto',
-    right: 20,
-    bottom: 80,
-    left: 'auto',
-    position: 'fixed',
-};

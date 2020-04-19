@@ -1,3 +1,5 @@
+//승규 2020-04-09 20:48 수정
+
 import React, {Component} from 'react';
 import { makeStyles, responsiveFontSizes } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -17,13 +19,14 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import FavorIcon from"./FavorIcon";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 345,
     padding:10
   },
   media: {
-    height: 0,
+    width: '100%',
     paddingTop: '56.25%', // 16:9
   },
   expand: {
@@ -65,43 +68,41 @@ var ItemCard=(props) => {
   return (
     <Card className={classes.root}>
       <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}> {/*글 쓴 사람 동그란 프로필*/}
-            {props.post.writer} 
-          </Avatar>
-        }
+        // avatar={ 나중에 writer 생기면 주석 풀기 -th
+        //   <Avatar aria-label="recipe" className={classes.avatar}> {/*글 쓴 사람 동그란 프로필*/}
+        //     {props.list.writer} 
+        //   </Avatar>
+        // }
 
         action={
           <IconButton aria-label="settings">
             <MoreVertIcon />
           </IconButton>
         }
-        title={props.post.title}
-        subheader={props.post.date}
+        title={props.list.title}
+        // subheader={props.list.date} 나중에 date 생기면 주석 풀기 -th
       />
-
+      <Link to={'/item?id='+props.list.id} className="link_items">
       <CardMedia
         className={classes.media}
-        image={props.post.src}
-        title={props.post.title}
+        image={props.list.src}
+        title={props.list.title}
       />
+      </Link>
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          {props.post.price}
+          {props.list.price}
         </Typography>
       </CardContent>
 
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-<<<<<<< HEAD:client/src/components/Tabs/MainTab/itemlist/ItemCard.js
           <FavoriteIcon onClick={function(e){
             e.preventDefault();
             // 좋아요 누르기 구현
           }}>
           </FavoriteIcon>
-          {props.post.FaNum}
-=======
->>>>>>> ac4eb542d4ec37c92ec8d1b2dc4952761307bf98:src/components/stories/Card.js
+          {props.list.FaNum}
         </IconButton>
 
         <IconButton aria-label="share">
@@ -127,21 +128,9 @@ var ItemCard=(props) => {
 
       <Collapse in={expanded} timeout="auto" unmountOnExit> {/*상세설명*/}
 
-        <CardContent>
-<<<<<<< HEAD:client/src/components/Tabs/MainTab/itemlist/ItemCard.js
-          <Typography paragraph>{props.post.desc}:</Typography>>
-=======
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-            minutes.
-          </Typography>
-          <Typography paragraph>
-       ragrant, about 10 minutes. Add
-            saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-          </Typography>
->>>>>>> ac4eb542d4ec37c92ec8d1b2dc4952761307bf98:src/components/stories/Card.js
-        </CardContent>
+        {/* <CardContent> 나중에 desc 생기면 주석 풀기 -th
+          <Typography paragraph>{props.list.desc}:</Typography>
+        </CardContent> */}
 
       </Collapse>
     </Card>

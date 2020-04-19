@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ItemCards from "./ItemCard";
+import ItemCard from "./ItemCard";
 //import ItemsCarousel from 'react-items-carousel';
 
 const ItemList = (props) => {
@@ -41,18 +40,9 @@ const ItemList = (props) => {
         outsideChevron
         chevronWidth={chevronWidth}
       >
-<<<<<<< HEAD:client/src/components/Tabs/MainTab/itemlist/ItemList.js
-        {props.list.map((post) =>
-          <li className="list_items" key={post.id}>
-            <Link to="/" className="link_items">
-              <ItemCards post={post}/>
-=======
-        {props.list.map((lists) =>
-          <li className="list_items" key={lists.id}>
-            <Link to={'/item?id='+lists.id} className="link_items">
-              <ItemCards lists={lists}></ItemCards>
->>>>>>> ac4eb542d4ec37c92ec8d1b2dc4952761307bf98:src/components/Tabs/MainTab/itemlist/list.js
-            </Link>
+        {props.list.map((list) =>
+          <li className="list_items" key={list.id}>
+              <ItemCard list={list}></ItemCard>
           </li>
         )}
       </Carousel>

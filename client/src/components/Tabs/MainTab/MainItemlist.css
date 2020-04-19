@@ -1,12 +1,11 @@
-/* itemlist 부분에 대한 css 파일 -th */
+/* MainItemList 부분에 대한 css 파일 -th */
 
-.itemlist_wrap {
+.mainItemList_wrap {
     display: flex;
     justify-content: center;
-
 }
 
-.itemlist {
+.mainItemList {
     display: block;
     width: 1280px;
 }
