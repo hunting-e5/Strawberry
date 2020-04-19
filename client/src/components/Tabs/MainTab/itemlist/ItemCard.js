@@ -1,25 +1,24 @@
 //승규 2020-04-09 20:48 수정
 
-import React, {Component} from 'react';
-import { makeStyles, responsiveFontSizes } from '@material-ui/core/styles';
-import clsx from 'clsx';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import React from './node_modules/react';
+import { makeStyles } from './node_modules/@material-ui/core/styles';
+import clsx from './node_modules/clsx';
+import Card from './node_modules/@material-ui/core/Card';
+import CardHeader from './node_modules/@material-ui/core/CardHeader';
+import CardMedia from './node_modules/@material-ui/core/CardMedia';
+import CardContent from './node_modules/@material-ui/core/CardContent';
+import CardActions from './node_modules/@material-ui/core/CardActions';
+import Collapse from './node_modules/@material-ui/core/Collapse';
+import Avatar from './node_modules/@material-ui/core/Avatar';
+import IconButton from './node_modules/@material-ui/core/IconButton';
+import Typography from './node_modules/@material-ui/core/Typography';
+import { red } from './node_modules/@material-ui/core/colors';
+import FavoriteIcon from './node_modules/@material-ui/icons/Favorite';
+import ShareIcon from './node_modules/@material-ui/icons/Share';
+import ExpandMoreIcon from './node_modules/@material-ui/icons/ExpandMore';
+import MoreVertIcon from './node_modules/@material-ui/icons/MoreVert';
 import FavorIcon from"./FavorIcon";
-import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link } from "./node_modules/react-router-dom";
 
 /* ItemCard는 ItemList로부터 item 객체를 props로 받는다.
   이때 item 객체는 json 형식이다.
@@ -45,7 +44,7 @@ var ItemCard=(props) => {
   // 스타일 설정
   const classes = useStyles();
 
-  /* 초기에는 확장 설정을 off로 해둔다 */
+  /* 초기에는 확장 설정을 off(즉, false)로 해둔다 */
   const [expanded, setExpanded] = React.useState(false);
 
 

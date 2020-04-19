@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import React, { useState } from './node_modules/react';
+import Carousel from "./node_modules/react-multi-carousel";
+import "./node_modules/react-multi-carousel/lib/styles.css";
 import ItemCard from "./ItemCard";
 //import ItemsCarousel from 'react-items-carousel';
 

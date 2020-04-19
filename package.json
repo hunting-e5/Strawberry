@@ -2,7 +2,7 @@
     "name": "management",
     "version": "1.0.0",
     "scripts": {
-        "start": "concurrently --kill-others-on-fail \"nodemon server.js\" \"cd client && npm start\""
+        "start": "concurrently --kill-others-on-fail \"nodemon app.js\" \"cd client && npm start\""
     },
     "dependencies": {
         "body-parser": "^1.19.0",

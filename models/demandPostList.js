@@ -1,3 +1,5 @@
+// 나중에 db 관련 내용 여기로 옮길 예정
+
 var mysql = require('mysql');
 
 var con = mysql.createConnection({

@@ -1,4 +1,4 @@
-import React from "react"
+import React from "./node_modules/react"
 import store from '../../../../store';
 class FavorIcon extends React.Component {
 	constructor (props) {

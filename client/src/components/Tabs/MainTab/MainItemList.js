@@ -3,7 +3,7 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-import ItemList from "./itemlist/ItemList";
+import ItemList from "./itemList/ItemList";
 import './MainItemList.css';
 
 
