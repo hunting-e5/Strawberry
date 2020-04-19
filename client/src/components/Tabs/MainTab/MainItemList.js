@@ -1,62 +1,46 @@
 //태형 2020-04-07 21:40 수정
+//상아 2020-04-19 18:35 수정
 
 import React, { Component } from 'react';
+import axios from 'axios';
 import ItemList from "./itemlist/ItemList";
 import './MainItemList.css';
 
+
+// 메인화면에서 DemandPost, SupplyPost를 보여주는 컴포넌트
 class MainItemList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            category: 'life',
-            supplyPostList: [],
+            currentCategory: 'life',
             demandPostList: [],
             message: "Hello",
-        }
+        };
+        this.callApi = this.callApi.bind(this);
     }
 
-    /* 루트 디렉토리의 server.js에 하드코딩 되어있는 데이터 가져오기 */
-    componentDidMount() {
-        this.callApi()
-            .then(res => this.setState({ supplyPostList: res.supplyPostList, demandPostList: res.demandPostList, message:"server responded" }))
-            .catch(err => console.log(err));
+    /* res = {"demandPostList":[...]} */
+    componentWillMount(){
+        this.callApi();
     }
 
-    callApi = async () => {
-        const response = await fetch('/api/posts');
-        const body = await response.json();
-        return body; //비동기 방식으로 처리. response 기다리는 동안 다른 정보 가져오기
+    // 루트 디렉토리의 server.js에서 mysql에 있는 데이터를 보내면, 이를 axios API로 객체로 받아서 리스트에 넣는다
+    callApi = () => {
+        axios.post('/api/readDemandPost')
+        .then((res) => {
+            console.log('data:', res.data);
+            this.setState({demandPostList: res.data});})
     }
-
-    /* public 디렉토리의 dummy 데이터 가져오기 */
-    // componentDidMount() {
-    //     this._getList();
-    // }
-    // _getList() {
-    //     const apiUrl = '/data/dummy/ItemList.json'; // 나중에 src/data/dummy/ItemList.json 절대경로로 수정하기
-    //     console.log(apiUrl, "getList");
-
-    //     axios.get(apiUrl)
-    //         .then(data => { //가지고 온 리스트를 저장
-    //             console.log(apiUrl, "saved");
-    //             this.setState({
-    //                 ItemList: data.data.ItemList,
-    //                 category: 'life'
-    //             });
-    //         })
-    //         .catch(error => {
-    //             console.log(error);
-    //         });
-    // }
 
     render() {
-        var demandPosts = this.state.demandPostList.filter(post => (
-            post.category === this.state.category
-        ))
+        var demandPosts = this.state.demandPostList;
+        // var demandPosts = this.state.demandPostList.filter(post => (
+        //     post.currentCategory === this.state.currentCategory
+        // ))
 
-        var supplyPosts = this.state.supplyPostList.filter(post => (
-            post.category === this.state.category
-        ))
+        // var supplyPosts = this.state.supplyPostList.filter(post => (
+        //     post.currentCategory === this.state.currentCategory
+        // ))
 
         return (
             <div class='mainItemList_wrap'>
@@ -65,10 +49,10 @@ class MainItemList extends Component {
                     <div id='demands'>
                         <ItemList list={demandPosts} />
                     </div>
-                    <div class='list_text'>빌려가세요~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+                    {/* <div class='list_text'>빌려가세요~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
                     <div id='supplies'>
                         <ItemList list={supplyPosts} />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );

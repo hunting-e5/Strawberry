@@ -40,11 +40,19 @@ const ItemList = (props) => {
         outsideChevron
         chevronWidth={chevronWidth}
       >
-        {props.list.map((list) =>
-          <li className="list_items" key={list.id}>
-              <ItemCard list={list}></ItemCard>
+
+      {/* ItemList는 item의 List를 props로 받아 ItemCard 컴포넌트에 mapping하여 각각의 아이템을 
+      ItemCard 형식으로 렌더링하는 컴포넌트이다.
+      따라서 각각의 item('한 개의' DemandPost, '한 개의' SupplyPost, '한 개의' 공지 등등 )을 props로 ItemCard에 넘겨준다.
+      */}
+
+        {props.list.map((item) =>
+          <li className="list_items" key={item.id}>
+              <ItemCard item={item}></ItemCard>
           </li>
         )}
+
+
       </Carousel>
     </ul>
   );

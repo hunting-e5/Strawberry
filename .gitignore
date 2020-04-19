@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 check.js
 node_modules
+
+#secret
+database.json

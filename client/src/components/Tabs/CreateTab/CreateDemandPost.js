@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
+// axios: REST API로 서버에 데이터를 전송하는 모듈
 const axios = require('axios').default;
 
 class CreateDemandPost extends Component {
@@ -22,17 +23,22 @@ class CreateDemandPost extends Component {
         this.handleValueChange = this.handleValueChange.bind(this);
     }
     
+
+    // submit 버튼을 눌렀을 때의 이벤트 핸들러
     handleFormSubmit(e){
         e.preventDefault();
         this.addDemandPost();
     }
 
+    // 폼에 한 글자 한글자가 입력될 때의 이벤트 핸들러
     handleValueChange(e){
         let nextState = {};
         nextState[e.target.name] = e.target.value;
         this.setState(nextState);  
     }
 
+
+    // post방식으로 서버에 응답하여 data를 전송 
     addDemandPost(){
         console.log(this.state);
         const url = '/api/demandpost';
@@ -48,7 +54,8 @@ class CreateDemandPost extends Component {
         };
         axios.post(url, data);
     }
-
+    
+    // 제출 양식
     render() {
         this.state.createdUserID = this.props.userID;
         return (
